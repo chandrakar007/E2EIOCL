@@ -29,7 +29,7 @@ public class ActionClass extends BaseClass {
 	}
 	
 	public static void waitForWebElementToAppear(WebElement findBy) {
-		WebDriverWait wait= new WebDriverWait((WebDriver) driver, Duration.ofSeconds(5));
+		WebDriverWait wait= new WebDriverWait((WebDriver) driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.visibilityOf(findBy));
 				
 	}
@@ -171,5 +171,26 @@ public class ActionClass extends BaseClass {
 				return destination;
 			}	
 			
-		
-}
+			public boolean launchUrl(WebDriver driver,String url) {
+				boolean flag = false;
+				try {
+					driver.navigate().to(url);
+					flag = true;
+					return true;
+				} catch (Exception e) {
+					return false;
+				} finally {
+					if (flag) {
+						System.out.println("Successfully launched \""+url+"\"");				
+					} else {
+						System.out.println("Failed to launch \""+url+"\"");
+					}		
+                  }}
+
+			public static void highLightElement(WebDriver driver, WebElement ele) {
+				
+				JavascriptExecutor jsExecutor=(JavascriptExecutor)driver;
+				jsExecutor.executeScript("arguments[0].setAttribute('style', 'background: yellow; border:2px solid red;');", ele);
+				jsExecutor.executeScript("arguments[0].setAttribute('style', 'border:; background: yellow');", ele);
+				
+			}}

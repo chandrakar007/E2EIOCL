@@ -29,7 +29,7 @@ public class LoginPage extends BaseClass {
 	   WebElement errorMessage;
 
 
-
+  
 	public CustomerProfile loginApp(String uname, String pswd) {
 		// TODO Auto-generated method stub
 		ActionClass.type(InputUsername,uname);
@@ -53,7 +53,14 @@ public class LoginPage extends BaseClass {
 		ActionClass.type(Inputpswd,pswd);
 		ActionClass.click(driver,login);
 		return new AdminMenu();
-
+	}
+	
+	public AdminMenuManageRole loginAppForAdminManageRole(String uname, String pswd) {
+		// TODO Auto-generated method stub
+		ActionClass.type(InputUsername,uname);
+		ActionClass.type(Inputpswd,pswd);
+		ActionClass.click(driver,login);
+		return new AdminMenuManageRole();
 	
 	}
 }

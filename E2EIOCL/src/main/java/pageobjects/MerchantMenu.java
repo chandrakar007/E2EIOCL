@@ -179,11 +179,6 @@ public class MerchantMenu extends BaseClass {
     	  saveMsg.click();
     //	  ActionClass.click(driver, nextBtn2);
     	 // ActionClass.click(driver, sameasRoCheck);
-	      
-    	  
-
-    	  
-    	  
-		
-	}
+	
+	  }
       }

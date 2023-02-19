@@ -18,16 +18,19 @@ public class ListenerClass extends ExtentManager implements ITestListener {
 
 	ActionClass action= new ActionClass();
 	
+	@Override
 	public void onTestStart(ITestResult result) {
 		test = extent.createTest(result.getName());
 	}
 
+	@Override
 	public void onTestSuccess(ITestResult result) {
 		if (result.getStatus() == ITestResult.SUCCESS) {
 			test.log(Status.PASS, "Pass Test case is: " + result.getName());
 		}
 	}
 
+	@Override
 	public void onTestFailure(ITestResult result) {
 		if (result.getStatus() == ITestResult.FAILURE) {
 			test.log(Status.FAIL,
@@ -42,22 +45,24 @@ public class ListenerClass extends ExtentManager implements ITestListener {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}}}
-
+	
+	@Override
 	public void onTestSkipped(ITestResult result) {
 		if (result.getStatus() == ITestResult.SKIP) {
 			test.log(Status.SKIP, "Skipped Test case is: " + result.getName());
 		}
 	}
-
+	@Override
 	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
 		// TODO Auto-generated method stub
 	}
-
+	
+	@Override
 	public void onStart(ITestContext context) {
 		// TODO Auto-generated method stub
 
 	}
-
+	@Override
 	public void onFinish(ITestContext context) {
 		// TODO Auto-generated method stub
 	}

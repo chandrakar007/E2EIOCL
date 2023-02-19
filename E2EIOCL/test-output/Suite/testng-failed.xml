@@ -6,14 +6,14 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="testcases.LoginPageTest">
+      <class name="testcases.AdminMenuTest">
         <methods>
           <include name="beforeSuite"/>
-          <include name="verifyLoginPage"/>
           <include name="afterSuite"/>
+          <include name="verifyAddUser" invocation-numbers="0"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- testcases.LoginPageTest -->
+      </class> <!-- testcases.AdminMenuTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

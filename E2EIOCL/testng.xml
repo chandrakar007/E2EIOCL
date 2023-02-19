@@ -10,6 +10,7 @@
 	    <classes>
 		 <class name="testcases.LoginPageTest"/>
 		  <class name="testcases.AdminMenuTest"/>
+		  <class name="testcases.AdminMenuManageRoleTest"/>
 	  </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

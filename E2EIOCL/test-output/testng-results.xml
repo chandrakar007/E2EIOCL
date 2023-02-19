@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="2" total="4" passed="1" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-02-11T03:40:11 IST" name="Suite" finished-at="2023-02-11T03:40:30 IST" duration-ms="18451">
+  <suite started-at="2023-02-19T19:04:33 IST" name="Default suite" finished-at="2023-02-19T19:04:43 IST" duration-ms="9790">
     <groups>
     </groups>
-    <test started-at="2023-02-11T03:40:11 IST" name="Test" finished-at="2023-02-11T03:40:30 IST" duration-ms="18451">
+    <test started-at="2023-02-19T19:04:33 IST" name="Default test" finished-at="2023-02-19T19:04:43 IST" duration-ms="9790">
       <class name="testcases.AdminMenuTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:testcases.AdminMenuTest@121314f7]" started-at="2023-02-11T03:40:18 IST" name="setup" finished-at="2023-02-11T03:40:22 IST" duration-ms="4466" status="PASS">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:testcases.AdminMenuTest@272113c4]" started-at="2023-02-19T19:04:33 IST" name="beforeSuite" finished-at="2023-02-19T19:04:33 IST" duration-ms="220" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:testcases.AdminMenuTest@272113c4]" started-at="2023-02-19T19:04:34 IST" name="setup" finished-at="2023-02-19T19:04:37 IST" duration-ms="3563" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifyAddUser(java.util.Map)[pri:0, instance:testcases.AdminMenuTest@121314f7]" started-at="2023-02-11T03:40:22 IST" name="verifyAddUser" data-provider="addUser" finished-at="2023-02-11T03:40:30 IST" duration-ms="7210" status="PASS">
+        <test-method signature="verifyAddUser(java.util.Map)[pri:0, instance:testcases.AdminMenuTest@272113c4]" started-at="2023-02-19T19:04:37 IST" name="verifyAddUser" data-provider="addUser" finished-at="2023-02-19T19:04:43 IST" duration-ms="5480" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -19,20 +23,6 @@
               </value>
             </param>
           </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyAddUser -->
-      </class> <!-- testcases.AdminMenuTest -->
-      <class name="testcases.LoginPageTest">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:testcases.LoginPageTest@242b836]" started-at="2023-02-11T03:40:11 IST" name="beforeSuite" finished-at="2023-02-11T03:40:11 IST" duration-ms="371" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:testcases.LoginPageTest@242b836]" started-at="2023-02-11T03:40:11 IST" name="setup" finished-at="2023-02-11T03:40:15 IST" duration-ms="3384" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="verifyLoginPage()[pri:0, instance:testcases.LoginPageTest@242b836]" started-at="2023-02-11T03:40:15 IST" name="verifyLoginPage" finished-at="2023-02-11T03:40:16 IST" duration-ms="1196" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [true] but found [false]]]>
@@ -43,7 +33,7 @@ at org.testng.Assert.fail(Assert.java:99)
 at org.testng.Assert.failNotEquals(Assert.java:1037)
 at org.testng.Assert.assertTrue(Assert.java:45)
 at org.testng.Assert.assertTrue(Assert.java:55)
-at testcases.LoginPageTest.verifyLoginPage(LoginPageTest.java:43)
+at testcases.AdminMenuTest.verifyAddUser(AdminMenuTest.java:76)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -77,12 +67,12 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyLoginPage -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:testcases.LoginPageTest@242b836]" started-at="2023-02-11T03:40:30 IST" name="afterSuite" finished-at="2023-02-11T03:40:31 IST" duration-ms="1340" status="PASS">
+        </test-method> <!-- verifyAddUser -->
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:testcases.AdminMenuTest@272113c4]" started-at="2023-02-19T19:04:43 IST" name="afterSuite" finished-at="2023-02-19T19:04:43 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
-      </class> <!-- testcases.LoginPageTest -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+      </class> <!-- testcases.AdminMenuTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

@@ -3,10 +3,16 @@ package pageobjects;
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import actiondriver.ActionClass;
 import base.BaseClass;
@@ -50,8 +56,19 @@ public class AdminMenu extends BaseClass{
 	   @FindBy(xpath="//button[normalize-space()='Create User']")
 	   WebElement createUser;
 	   @FindBy(xpath="//div[@id='toast-container']")
-	   WebElement textMsg;
-	   
+	   WebElement textMsg; 
+	   @FindBy(xpath="button[@class='btn-close]")
+	   WebElement closebtn;
+	   @FindBy(xpath="//input[@formcontrolname='searchText']")
+	   WebElement searchuser;
+	   @FindBy(xpath="//button[normalize-space()='Search']")
+	   WebElement searchBtn;
+	   @FindBy(xpath="//label[@class='grid-records']")
+	   WebElement totalRecords;
+	   @FindBy(xpath = "//a[@title='Manage Roles']")
+		WebElement MngRoles;
+	 
+	  
 	   
 
 
@@ -84,7 +101,8 @@ public class AdminMenu extends BaseClass{
 	    	   
 			   ActionClass.click(driver, admin);
 			   ActionClass.click(driver, security);
-			   ActionClass.type(userName, UserName);
+			   ActionClass.highLightElement(driver, userName);	   
+			   ActionClass.type(userName, UserName);	  
 			   ActionClass.type(email, Email);
 			   ActionClass.type(pswd, Password);
 			   ActionClass.type(cnfrmpass, ConPassword);
@@ -100,14 +118,22 @@ public class AdminMenu extends BaseClass{
 		       rb.keyRelease(KeyEvent.VK_ENTER);
 		       ActionClass.type(mobile, Mobile);
 		       ActionClass.click(driver, createUser);
+
+		       
 	       }
 	       
 	       public String getTextmsg() {
-	    	   String confirmMsg= textMsg.getText();
-	    	   return confirmMsg;
-		       
-			   
-			   
+	    	   String confirmMsg= textMsg.getText();  
+	    	   return confirmMsg;	
+	    	     	 
 		   }
-	       
-           }
+	        
+	       public void searchUser(String username) {
+	    	   
+	    	   ActionClass.waitForWebElementToAppear(searchuser); 
+	    	   ActionClass.type(searchuser, username);
+	    	   ActionClass.click(driver, searchBtn);
+	    	
+	       }}
+
+	      
